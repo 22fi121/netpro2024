@@ -24,7 +24,7 @@ public class HowOldAreYou {
             }else if(36<=age&&age<=98) {
                 System.out.println("あなたは昭和"+(98-age)+"年生まれですね。");
             }else if(99<=age&&age<=120){
-
+                System.out.println("あなたは大正"+(120-age)+"年生まれですね。");
             }
 		}
 		catch(IOException e) {
