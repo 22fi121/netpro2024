@@ -1,0 +1,117 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StringOperationTest",
+            "request": "launch",
+            "mainClass": "StringOperationTest",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "StringBufferTest",
+            "request": "launch",
+            "mainClass": "StringBufferTest",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "ArraysTest",
+            "request": "launch",
+            "mainClass": "ArraysTest",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "IfTest3",
+            "request": "launch",
+            "mainClass": "IfTest3",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "3",
+                "6",
+                "9",
+                "10",
+                "-1",
+                "2"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "IfTest2",
+            "request": "launch",
+            "mainClass": "IfTest2",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "4",
+                "6",
+                "8",
+                "2",
+                "1"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "IfTest1",
+            "request": "launch",
+            "mainClass": "IfTest1",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "4",
+                "6",
+                "8"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "IfTest0",
+            "request": "launch",
+            "mainClass": "IfTest0",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "HowOldAreYou",
+            "request": "launch",
+            "mainClass": "HowOldAreYou",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "HelloArgs",
+            "request": "launch",
+            "mainClass": "HelloArgs",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "A0",
+                "A1",
+                "A2",
+                "A3"
+            ]
+        }
+    ]
+}
