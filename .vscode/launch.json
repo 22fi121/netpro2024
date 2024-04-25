@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NetprolabMember",
+            "request": "launch",
+            "mainClass": "NetprolabMember",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "NetproLabMember",
+            "request": "launch",
+            "mainClass": "NetproLabMember",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
             "name": "StringOperationTest",
             "request": "launch",
             "mainClass": "StringOperationTest",
