@@ -6,6 +6,137 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MyExceptionHoliday",
+            "request": "launch",
+            "mainClass": "MyExceptionHoliday",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "HeikinCKadai",
+            "request": "launch",
+            "mainClass": "HeikinCKadai",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "XmasTreeKadai",
+            "request": "launch",
+            "mainClass": "XmasTreeKadai",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "2",
+                "3"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "HeikinA",
+            "request": "launch",
+            "mainClass": "HeikinA",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "ClassA",
+            "request": "launch",
+            "mainClass": "ClassA",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "LoopAdvance",
+            "request": "launch",
+            "mainClass": "LoopAdvance",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "RandSwitch",
+            "request": "launch",
+            "mainClass": "RandSwitch",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "While",
+            "request": "launch",
+            "mainClass": "While",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "ExtendeFor",
+            "request": "launch",
+            "mainClass": "ExtendeFor",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "ForTest",
+            "request": "launch",
+            "mainClass": "ForTest",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Calc3MethodTestInatance",
+            "request": "launch",
+            "mainClass": "Calc3MethodTestInatance",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "3",
+                "6",
+                "9"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Calc3MethodTest",
+            "request": "launch",
+            "mainClass": "Calc3MethodTest",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "3",
+                "6",
+                "9"
+            ]
+        },
+        {
+            "type": "java",
+            "name": "Calc2ScannerFile",
+            "request": "launch",
+            "mainClass": "Calc2ScannerFile",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Calc2Scanner",
+            "request": "launch",
+            "mainClass": "Calc2Scanner",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Calc2",
+            "request": "launch",
+            "mainClass": "Calc2",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Calc1",
+            "request": "launch",
+            "mainClass": "Calc1",
+            "projectName": "netpro2024_d5378d9e",
+            "args": [
+                "3",
+                "6",
+                "9"
+            ]
+        },
+        {
+            "type": "java",
             "name": "NetprolabMember",
             "request": "launch",
             "mainClass": "NetprolabMember",
