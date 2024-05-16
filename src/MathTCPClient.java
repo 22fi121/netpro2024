@@ -4,7 +4,7 @@ import java.net.BindException;
 import java.net.Socket; //ネットワーク関連のパッケージを利用する
 import java.util.Scanner;
 
-public class XmasTCPClient {
+public class MathTCPClient {
 
     public static void main(String arg[]) {
         boolean open = true;
@@ -16,37 +16,40 @@ public class XmasTCPClient {
             Socket socket = new Socket("localhost", port);
             System.out.println("接続されました");
             while(open == true){
-            System.out.println("プレゼントを送ります");
+            System.out.println("計算します。");
 
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 
-            System.out.println("メッセージを入力してください(例:メリークリスマス) ↓");
+            System.out.println("メッセージを入力してください(終了する場合はexitと入力) ↓");
             String message = scanner.next();
-            String content;
+            int first = 0;
+            int second = 0;
             if(message.equals("exit")){
-             content = "";
-
             }else{
-            System.out.println("プレゼントの内容を入力してください(例:お菓子) ↓");
-             content = scanner.next();
+            System.out.println("一つ目の数字を入力してください。");
+             first = scanner.nextInt();
+             System.out.println("二つ目の数字を入力してください。");
+             second = scanner.nextInt();
             }
             
             
             
-            XmasPresent present = new XmasPresent();
+            MathPresent present = new MathPresent();
             present.setMessage(message);
-            present.setContent(content);
+            present.setFirst(first);
+            present.setSecond(second);
+
 
             oos.writeObject(present);
             oos.flush();
 
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
-            XmasPresent okaeshiPresent = (XmasPresent) ois.readObject();
+            MathPresent okaeshiPresent = (MathPresent) ois.readObject();
 
             
             String replayMsg = okaeshiPresent.getMessage();
-            System.out.println("サーバからのメッセージは" + replayMsg);
+            System.out.println(replayMsg);
             if(message.equals("exit")){
             scanner.close();
             ois.close();
@@ -55,8 +58,10 @@ public class XmasTCPClient {
             open =false;
             socket.close();
             }else{
-            String replayContent = okaeshiPresent.getContent();
-            System.out.println(replayContent + "をもらいました！");
+            int replaysum1 = okaeshiPresent.getSum1();
+            System.out.println(replaysum1 + "をもらいました！");
+            int replaysum2 = okaeshiPresent.getSum2();
+            System.out.println(replaysum2 + "をもらいました！");
             }
             
             }

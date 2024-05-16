@@ -5,20 +5,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class XmasTCPServer {
+public class MathTCPServer {
 
-    private static final int times = 3;
-
-    private static String serverProcess(String content) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("🎁");
-        for (int i = 0; i < times; i++) {
-            sb.append(content);
-        }
-        sb.append("🎁");
-        String result = sb.toString();
-        return result;
-    }
 
     public static void main(String arg[]) {
         boolean open = true;
@@ -38,26 +26,30 @@ public class XmasTCPServer {
 
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
-            XmasPresent present = (XmasPresent) ois.readObject();// Integerクラスでキャスト。
+            MathPresent present = (MathPresent) ois.readObject();// Integerクラスでキャスト。
 
 
             String msgPresent = present.getMessage();
+            int first = present.getFirst();
+            int second = present.getSecond();
             if(msgPresent.equals("exit")){
                 System.out.println("終了のメッセージが届きました。");
             }else{
-                System.out.println("メッセージは" + msgPresent);
+                System.out.println("一つ目の数字は、" + first + "です。");
+                System.out.println("二つ目の数字は、" + second + "です。");
             }
-            String presentFromClient = present.getContent();
-            System.out.println("プレゼントの内容は" + presentFromClient);
+            int sum1 = first + second;
+            int sum2 = first*second;
 
             ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
 
-            XmasPresent response = new XmasPresent();
+            MathPresent response = new MathPresent();
             if(msgPresent.equals("exit")){
                 response.setMessage("今回はありがとうございました！");
             }else{
-                response.setMessage("サーバーです。メリークリスマス！\n" + presentFromClient + "ありがとう。\nプレゼントのお返しは" + times + "倍" + "です");
-                response.setContent(serverProcess(presentFromClient));
+                response.setMessage("サーバーです。計算が完了いたしました。\n");
+                response.setSum1(sum1);
+                response.setSum2(sum2);
             }
             
             
