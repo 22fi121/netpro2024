@@ -5,7 +5,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class MathTCPServer {
+public class TaskServerOnce {
 
 
     public static void main(String arg[]) {
@@ -26,7 +26,7 @@ public class MathTCPServer {
 
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
-            MathPresent present = (MathPresent) ois.readObject();// Integerクラスでキャスト。
+            TaskObject present = (TaskObject) ois.readObject();// Integerクラスでキャスト。
 
 
             String msgPresent = present.getMessage();

@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class MathPresent implements Serializable, ITask {
+public class TaskObject implements Serializable, ITask {
 
     String message;
     String content;

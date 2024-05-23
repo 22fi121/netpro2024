@@ -4,7 +4,7 @@ import java.net.BindException;
 import java.net.Socket; //ネットワーク関連のパッケージを利用する
 import java.util.Scanner;
 
-public class MathTCPClient {
+public class TaskClientOnce {
 
     public static void main(String arg[]) {
         boolean open = true;
@@ -31,7 +31,7 @@ public class MathTCPClient {
             
             
             
-            MathPresent present = new MathPresent();
+            TaskObject present = new TaskObject();
             present.setMessage(message);
             present.setExecNumber(number);
 
@@ -41,7 +41,7 @@ public class MathTCPClient {
 
             ObjectInputStream ois = new ObjectInputStream(socket.getInputStream());
 
-            MathPresent okaeshiPresent = (MathPresent) ois.readObject();
+            TaskObject okaeshiPresent = (TaskObject) ois.readObject();
 
             
             String replayMsg = okaeshiPresent.getMessage();
