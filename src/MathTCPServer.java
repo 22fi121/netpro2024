@@ -30,37 +30,35 @@ public class MathTCPServer {
 
 
             String msgPresent = present.getMessage();
-            int first = present.getFirst();
-            int second = present.getSecond();
+            int number = present.getExecNumber();
             if(msgPresent.equals("exit")){
                 System.out.println("終了のメッセージが届きました。");
-            }else{
-                System.out.println("一つ目の数字は、" + first + "です。");
-                System.out.println("二つ目の数字は、" + second + "です。");
+            }else if(number <= 1 ){
+                System.out.println("この数字は使えません。");
             }
-            int sum1 = first + second;
-            int sum2 = first*second;
-
-            ObjectOutputStream oos = new ObjectOutputStream(socket.getOutputStream());
-
-            MathPresent response = new MathPresent();
-            if(msgPresent.equals("exit")){
-                response.setMessage("今回はありがとうございました！");
-            }else{
-                response.setMessage("サーバーです。計算が完了いたしました。\n");
-                response.setSum1(sum1);
-                response.setSum2(sum2);
+            else{
+                System.out.println("調べる数字は、" + number + "です。");
             }
-            
-            
-            oos.writeObject(response);
-            oos.flush();
 
             if(msgPresent.equals("exit")){
-                open = false;
+                present.setMessage("今回はありがとうございました！");
+            }else{
+                present.setMessage("サーバーです。計算が完了いたしました。\n");
+                present.exec();
+                System.out.println("結果は"+present.getResult());
+            }
+            
+            ObjectOutputStream oos =
+				new ObjectOutputStream(socket.getOutputStream());
+
+                oos.writeObject(present);
+                oos.flush();
+            
+            
+            if(msgPresent.equals("exit") || number <= 1){
+            open = false;
             // close処理
             ois.close();
-            oos.close();
             // socketの終了。
             socket.close();
             server.close();

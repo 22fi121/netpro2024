@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class MathPresent implements Serializable {
+public class MathPresent implements Serializable, ITask {
 
     String message;
     String content;
@@ -8,6 +8,8 @@ public class MathPresent implements Serializable {
     int second;
     int sum1;
     int sum2;
+    int x;
+    int result;
 
     public String getMessage() {
         return message;
@@ -47,6 +49,50 @@ public class MathPresent implements Serializable {
 
     public void setSum2(int sum2){
         this.sum2 = sum2;
+    }
+
+    public void setExecNumber(int x) {
+        this.x = x;
+    }
+
+    public int getExecNumber(){
+        return x;
+    }
+
+    public boolean isPrime(int w){
+        if (w <= 1) {
+            return false;
+        }
+        if (w <= 3) {
+            return true;
+        }
+        
+        // 2と3の倍数以外の奇数を確認
+        if (w % 2 == 0 || w % 3 == 0) {
+            return false;
+        }
+        
+        // 6k ± 1の形の数のみを確認
+        for (int i = 5; i * i <= w; i += 6) {
+            if (w % i == 0 || w % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public void exec() {
+        int number = 0;
+        for(int i = 1; i<x; i++){
+            if(isPrime(i)){
+                number = i;
+            }
+        }
+        this.result = number;
+    }
+
+    public int getResult(){
+        return result;
     }
 
 }

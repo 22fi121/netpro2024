@@ -22,22 +22,18 @@ public class MathTCPClient {
 
             System.out.println("メッセージを入力してください(終了する場合はexitと入力) ↓");
             String message = scanner.next();
-            int first = 0;
-            int second = 0;
+            int number = 1;
             if(message.equals("exit")){
             }else{
-            System.out.println("一つ目の数字を入力してください。");
-             first = scanner.nextInt();
-             System.out.println("二つ目の数字を入力してください。");
-             second = scanner.nextInt();
+            System.out.println("調べたい数字を入力してください。");
+             number = scanner.nextInt();
             }
             
             
             
             MathPresent present = new MathPresent();
             present.setMessage(message);
-            present.setFirst(first);
-            present.setSecond(second);
+            present.setExecNumber(number);
 
 
             oos.writeObject(present);
@@ -57,11 +53,19 @@ public class MathTCPClient {
             System.out.println("ありがとうございました！");
             open =false;
             socket.close();
+            }else if(number <= 1){
+                scanner.close();
+                ois.close();
+                oos.close();
+                System.out.println("その数字は使えません。");
+                open =false;
+                socket.close();
             }else{
-            int replaysum1 = okaeshiPresent.getSum1();
-            System.out.println(replaysum1 + "をもらいました！");
-            int replaysum2 = okaeshiPresent.getSum2();
-            System.out.println(replaysum2 + "をもらいました！");
+            int replaysum1 = okaeshiPresent.getResult();
+            System.out.println("結果は"+ replaysum1 + "です。");
+            if(replaysum1 == 0){
+                System.out.println("この数字は素数のようです。");
+            }
             }
             
             }
