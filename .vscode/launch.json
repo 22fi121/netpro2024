@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MovingBallAWT",
+            "request": "launch",
+            "mainClass": "guichat.MovingBallAWT",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "GUIAnimationMain",
+            "request": "launch",
+            "mainClass": "guichat.GUIAnimationMain",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "GUIAniMultiTCPClient2",
+            "request": "launch",
+            "mainClass": "guichat.GUIAniMultiTCPClient2",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "FacesAWTYamamotoKoji",
+            "request": "launch",
+            "mainClass": "ghubasic.FacesAWTYamamotoKoji",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "FacesAWTMain",
+            "request": "launch",
+            "mainClass": "ghubasic.FacesAWTMain",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "Level1",
+            "request": "launch",
+            "mainClass": "java.Level1",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
+            "name": "FacesAWTMain",
+            "request": "launch",
+            "mainClass": "guibasic.FacesAWTMain",
+            "projectName": "netpro2024_d5378d9e"
+        },
+        {
+            "type": "java",
             "name": "TaskClientOnce",
             "request": "launch",
             "mainClass": "TaskClientOnce",
