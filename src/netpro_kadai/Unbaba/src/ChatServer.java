@@ -17,10 +17,10 @@ public class ChatServer
     static int GamePhase=0;
     static int[][] EnemyStates=new int[][]
     {
-        new int[]{/*HP*/3,/*ATK*/2,/*DROP*/1},//ウサギA
-        new int[]{/*HP*/5,/*ATK*/2,/*DROP*/2},//B
-        new int[]{/*HP*/6,/*ATK*/2,/*DROP*/3},//C
-        new int[]{/*HP*/7,/*ATK*/3,/*DROP*/4}//D
+        new int[]{/*HP*/4,/*ATK*/2,/*DROP*/1},//ウサギA
+        new int[]{/*HP*/6,/*ATK*/2,/*DROP*/2},//B
+        new int[]{/*HP*/7,/*ATK*/2,/*DROP*/3},//C
+        new int[]{/*HP*/8,/*ATK*/3,/*DROP*/4}//D
     };
     private static List<ClientHandler> clients = new ArrayList<>();
     private static Random random = new Random();
