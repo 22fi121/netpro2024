@@ -81,7 +81,7 @@ public class ChatServer
             "スキル⑤:再生力(休憩の回復量+1)\n"+
             "スキル⑥:鉄壁(プレイヤーの受けるダメージ-1)\n"+
             "スキル⑦:蛮勇(プレイヤーの与えるダメージ+2、受けるダメージ+2)\n"+
-            "スキル⑧:食いしん坊(休憩のお肉消費量+1、回復量+2)\n"+
+            "スキル⑧:食いしん坊(休憩のお肉消費量+1、回復量+2(お肉が一個の時は通常通りの回復量))\n"+
             "\nこれらから選んでください。数字1~8で回答",PlNum);
             client.CanMove=true; 
             synchronized (ChatServer.class) {while(NextCount==0){try{ChatServer.class.wait();}catch(InterruptedException e){}}}
