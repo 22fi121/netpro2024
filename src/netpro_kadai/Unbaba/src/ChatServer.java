@@ -343,12 +343,12 @@ public class ChatServer
 
         public void EatMeat(){ if(Meat>0){
             if(SkillA == 5 || SkillB == 5) { //スキル⑤を選択した場合
-                if(SkillA == 8 || SkillB == 8){ //スキル⑧も選択した場合
+                if((SkillA == 8 || SkillB == 8) && Meat>1){ //スキル⑧も選択した場合
                     Meat--; HP+=2;
                 }
                     Meat--; HP+=4;
             }else{
-                if(SkillA == 8 || SkillB == 8){ //スキル⑧を選択した場合
+                if((SkillA == 8 || SkillB == 8) && Meat>1){ //スキル⑧を選択した場合
                     Meat--; HP+=2;
                 }else{
                     Meat--; HP+=3;
